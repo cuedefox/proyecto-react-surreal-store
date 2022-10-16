@@ -1,0 +1,29 @@
+$color1: #000000;
+$color2: #3E065F;
+$color3: #700B97;
+$color4: #8E05C2;
+
+@mixin size($a, $b) {
+    width: $a;
+    height: $b;
+}
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        color: $color2;
+        font-family: 'Signika Negative', sans-serif;
+        font-weight: 700;
+    }
+} 
+
+ul {
+    list-style: none;
+}
+
+ol {
+    @extend ul;
+}
+
+a {
+    text-decoration: none;
+}

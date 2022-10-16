@@ -1,0 +1,71 @@
+.menu {
+    background-color: $color1;
+    @include size(100vw, 75px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    box-shadow: 5px 0 10px rgba($color: $color3, $alpha: .6)
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    margin-top: 13px;
+    li {
+        border-radius: 3px;
+        margin: 0 5px;
+        .active {
+            @extend li:hover;
+        }
+        &:hover {
+            background-color: rgba($color: $color3, $alpha: .3);
+            transition: .4s;
+        }
+        a {
+            padding: 7px 13px;
+            font-size: 1em;
+            display: block;
+            text-transform: uppercase;
+            color: $color4;
+        }
+    }
+}
+
+ul.show {
+    top: 65px;
+}
+
+.logo {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    h2 {
+        color: $color4;
+        padding-left: .3em;
+        top: 1em;
+        padding-top: .3em;
+    }
+    img {
+        @include size(3.4em, 3.4em);
+    }
+}
+
+.menu-bars {
+    display: none;
+}
+
+.activelinea1-menu-bar {
+    transform: rotate(45deg) translate(-2px, 1px);
+}
+
+.activelinea2-menu-bar {
+    opacity: 0;
+    margin-left: -30px;
+}
+
+.activelinea3-menu-bar {
+    transform: rotate(-45deg) translate(-4px, 2px);
+}

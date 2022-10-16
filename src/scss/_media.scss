@@ -1,0 +1,57 @@
+@media screen and (max-width: 858px) {
+    .menu {
+        height: 75px;
+    }
+    .menu-bars {
+        @include size(30px, 30px);
+        cursor: pointer;
+        transform: scale(170%);
+        margin-bottom: 3px;
+        margin-right: 30px;
+        display: block;
+        span {
+            display: block;
+            @include size(100%, 2px);
+            background-color: $color4;
+            margin-top: 6px;
+            transform-origin: 0px 100%;
+            transition: all 0.3s;
+        }
+    }
+    .menu-items {
+        position: fixed;
+        @include size(100vw, calc(100% - 55px));
+        background: $color2;
+        top: -100vh;
+        text-align: center;
+        transition: all ease-in-out .4s;
+        flex-direction: column;
+        li {
+            margin: 30px 0 0 0;
+            line-height: 30px;
+            &:hover {
+                background: none;
+            }
+            a {
+                font-size: 20px;
+                color: #fff;
+                font-weight: bold;
+                &:hover {
+                    color: $color4;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 858px) and (orientation: landscape) {
+    .menu-items {
+        li {
+            margin: 5px 0 0 0;
+        }
+        .menu-items {
+            overflow: scroll;
+            height: calc(100%-65px);
+        }
+    }
+}
