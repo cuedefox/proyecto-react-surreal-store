@@ -1,31 +1,37 @@
+@font-face {
+  font-family: 'GoticaBastard';
+  src: url("./fonts/GoticaBastard.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
 h1 {
   color: #3E065F;
-  font-family: 'Signika Negative', sans-serif;
+  font-family: 'GoticaBastard', sans-serif;
   font-weight: 700; }
 
 h2 {
   color: #3E065F;
-  font-family: 'Signika Negative', sans-serif;
+  font-family: 'GoticaBastard', sans-serif;
   font-weight: 700; }
 
 h3 {
   color: #3E065F;
-  font-family: 'Signika Negative', sans-serif;
+  font-family: 'GoticaBastard', sans-serif;
   font-weight: 700; }
 
 h4 {
   color: #3E065F;
-  font-family: 'Signika Negative', sans-serif;
+  font-family: 'GoticaBastard', sans-serif;
   font-weight: 700; }
 
 h5 {
   color: #3E065F;
-  font-family: 'Signika Negative', sans-serif;
+  font-family: 'GoticaBastard', sans-serif;
   font-weight: 700; }
 
 h6 {
   color: #3E065F;
-  font-family: 'Signika Negative', sans-serif;
+  font-family: 'GoticaBastard', sans-serif;
   font-weight: 700; }
 
 ul, ol {
@@ -64,17 +70,18 @@ a {
       color: #8E05C2; }
 
 ul.show, ol.show {
-  top: 65px; }
+  top: 60px; }
 
 .logo {
-  padding: 0 30px;
+  padding: 0 30px 5px 20px;
   display: flex;
   align-items: center; }
   .logo h2 {
     color: #8E05C2;
     padding-left: .3em;
     top: 1em;
-    padding-top: .3em; }
+    padding-top: .3em;
+    font-size: xx-large; }
   .logo img {
     width: 3.4em;
     height: 3.4em; }
@@ -122,11 +129,12 @@ ul.show, ol.show {
     flex-direction: column; }
     .menu-items li {
       margin: 30px 0 0 0;
-      line-height: 30px; }
+      line-height: 70px; }
       .menu-items li:hover, .menu-items li .active {
         background: none; }
       .menu-items li a {
-        font-size: 20px;
+        margin-right: 60px;
+        font-size: 26px;
         color: #fff;
         font-weight: bold; }
         .menu-items li a:hover {

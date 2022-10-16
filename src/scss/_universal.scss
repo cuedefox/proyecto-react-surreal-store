@@ -3,6 +3,13 @@ $color2: #3E065F;
 $color3: #700B97;
 $color4: #8E05C2;
 
+@font-face {
+    font-family: 'GoticaBastard';
+    src: url('./fonts/GoticaBastard.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
 @mixin size($a, $b) {
     width: $a;
     height: $b;
@@ -11,7 +18,7 @@ $color4: #8E05C2;
 @for $i from 1 through 6 {
     h#{$i} {
         color: $color2;
-        font-family: 'Signika Negative', sans-serif;
+        font-family: 'GoticaBastard', sans-serif;
         font-weight: 700;
     }
 } 
