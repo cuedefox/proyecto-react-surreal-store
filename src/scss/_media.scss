@@ -20,26 +20,37 @@
     }
     .menu-items {
         position: fixed;
-        @include size(100vw, calc(100% - 55px));
+        @include size(100vw, calc(100% - 45px));
         background: $color2;
         top: -100vh;
         text-align: center;
         transition: all ease-in-out .4s;
         flex-direction: column;
         li {
-            margin: 30px 0 0 0;
+            margin: 20px 0 0 0;
             line-height: 70px;
             &:hover {
                 background: none;
             }
             a {
-                margin-right: 60px;
-                font-size: 26px;
+                font-size: 20px;
                 color: #fff;
                 font-weight: bold;
                 &:hover {
                     color: $color4;
                 }
+            }
+        }
+        .cart-nav {
+            margin: 0px 0 0 0;
+            img {
+                scale: 200%;
+            }
+            p {
+                font-size: 0.9em;
+                color: $color4;
+                top: 5px;
+                left: 17px;
             }
         }
     }

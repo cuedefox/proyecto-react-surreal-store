@@ -1,9 +1,8 @@
 import React from "react";
 
-const Faq = () => {
+const AboutUs = () => {
     return <>
-    
     </>
 }
 
-export default Faq;
+export default AboutUs;

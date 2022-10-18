@@ -1,9 +1,8 @@
 import React from "react";
 
-const Faq = () => {
+const Cart = () => {
     return <>
-    
     </>
 }
 
-export default Faq;
+export default Cart;
