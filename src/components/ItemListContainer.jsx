@@ -1,7 +1,8 @@
 import React from "react";
 
-const ItemListContainer = () => {
+const ItemListContainer = ({titulo}) => {
     return <>
+        <h1>{titulo}</h1>
     </>
 }
 

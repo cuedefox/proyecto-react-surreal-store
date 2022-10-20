@@ -9,11 +9,12 @@ import NavBar from "./components/NavBar";
 import "./main.css"
 
 function App() {
+  let titulo = "Surreal";
   return <>
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route exact path="/" element={<HomeContainer />} />
+        <Route exact path="/" element={<ItemListContainer titulo={titulo} />} />
         <Route exact path="/category/:genero" element={<ItemListContainer />} />
         <Route exact path="/item/:articulo" element={<ItemDetailContainer />} />
         <Route exact path="/sobre-nosotros" element={<AboutUs />} />
