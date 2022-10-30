@@ -1,11 +1,34 @@
-import React from "react";
-import ItemCount from "./ItemCount";
+import { React, useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { getFetch } from "../helpers/getFetch";
+import ItemList from "./ItemList";
+import Spinner from "./Spinner";
 
-const ItemListContainer = ({titulo}) => {
-    return <>
-        <h1>{titulo}</h1>
-        <ItemCount stock={10} initial={1} />
-    </>
+const ItemListContainer = () => {
+    const [items, setItems] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const {category} = useParams();
+
+    useEffect(() => {
+        getFetch
+        .then(response => {
+            if(category === "all" || category == undefined) {
+                setItems(response);
+            }else {
+                let products = response.filter(product => product.category === category);
+                setItems(products);
+            }
+        })
+        .catch(err => console.log(`error: ${err}`))
+        .finally(() => setLoading(false));
+    }, [category]);
+
+    return <div>
+        {
+            loading ?  <Spinner />
+            : <ItemList items={items} />
+        }
+    </div>
 }
 
 export default ItemListContainer;

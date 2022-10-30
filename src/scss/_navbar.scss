@@ -45,12 +45,8 @@ ul.show {
     h2 {
         color: $color4;
         padding-left: .3em;
-        top: 1em;
-        padding-top: .3em;
+        padding-top: .5em;
         font-size: xx-large;
-    }
-    img {
-        @include size(3.4em, 3.4em);
     }
 }
 
