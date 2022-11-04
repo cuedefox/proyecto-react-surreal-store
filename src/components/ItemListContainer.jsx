@@ -7,21 +7,21 @@ import Spinner from "./Spinner";
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
-    const {category} = useParams();
+    const {categoryId} = useParams();
 
     useEffect(() => {
         getFetch
         .then(response => {
-            if(category === "all" || category == undefined) {
+            if(categoryId === "all" || categoryId == undefined) {
                 setItems(response);
             }else {
-                let products = response.filter(product => product.category === category);
+                let products = response.filter(product => product.category === categoryId);
                 setItems(products);
             }
         })
         .catch(err => console.log(`error: ${err}`))
         .finally(() => setLoading(false));
-    }, [category]);
+    }, [categoryId]);
 
     return <div>
         {
