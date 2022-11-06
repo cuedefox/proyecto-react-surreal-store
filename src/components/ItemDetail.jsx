@@ -13,14 +13,15 @@ const ItemDetail = ({item}) => {
     const cargarImagen = require.context("../assets/imgitem", true);
 
     return <div className="item-detail">
-        <img src={cargarImagen(`./${item.pictureUrl}`)} alt={item.name} />
-        <div>
+        <img src={cargarImagen(`./${item.pictureUrl}`)} alt={item.name} className="detail-img" />
+        <div className="detail-info">
             <h2>{item.name}</h2>
-            <p>{`${item.description}.`}</p>
-        </div>
-        <div>
             <p>{item.price}</p>
             <ItemCount stock={item.stock} />
+        </div>
+        <div className="detail-description">
+            <h3>Descripcion del producto</h3>
+            <p>{`${item.description}.`}</p>
         </div>
 
     </div>

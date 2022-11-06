@@ -1,0 +1,19 @@
+.item-detail {
+    display: grid;
+    grid-template-areas: 
+    "img info",
+    "description description"
+    ;
+}
+
+.detail-img {
+    grid-area: img;
+}
+
+.detail-info {
+    grid-area: info;
+}
+
+.detail-description {
+    grid-area: description;
+}

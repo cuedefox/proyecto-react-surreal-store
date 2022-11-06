@@ -1,10 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import backgroundImg from "../assets/img/background-categories.webp"
 
 const Categories = () => {
     const cargarImagen = require.context("../assets/img", true);
 
-    return <div className="categories">
+    const backImg={
+        backgroundImage: 
+        `url(${backgroundImg})`
+    }
+
+    return <div className="categories" style={backImg}>
         <h2>Categorias</h2>
         <div>
             <div>

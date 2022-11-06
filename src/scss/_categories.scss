@@ -1,0 +1,31 @@
+.categories {
+    background: fixed;
+    background-size: cover;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-items: center;
+    h2 {
+        font-size: 3em;
+        margin: 0.5em;
+    }
+    div {
+        display: flex;
+        div {
+            margin: 1em;
+            position: relative;
+            img {
+                border-radius: 1em;
+                @include size(15em, 15em);
+            }
+            h3 {
+                color: #ffffff;
+                position: absolute;
+                bottom: 0.2em;
+                left: 2.5em;
+                font-size: 2em;
+                text-shadow: 3px 2px 13px #000000;
+            }
+        }
+    }
+}

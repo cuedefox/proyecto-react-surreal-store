@@ -17,7 +17,7 @@ const NavBar = () => {
             </Link>
             <ul className={mobileMenu ? "menu-items show" : "menu-items"}>
                 <li><Link className={linkActive == "inicio" ? "active" : null} onClick={() => setLinkActive("inicio")} to={"/"}>Inicio</Link></li>
-                <li><Link className={linkActive == "categorias" ? "active" : null} onClick={() => setLinkActive("categorias")} to={"/category/all"}>categorias</Link></li>
+                <li><Link className={linkActive == "categorias" ? "active" : null} onClick={() => setLinkActive("categorias")} to={"/category/all"}>productos</Link></li>
                 <li><Link className={linkActive == "sobre" ? "active" : null} onClick={() => setLinkActive("sobre")} to={"/about-us"}>Sobre Nosotros</Link></li>
                 <li><Link className={linkActive == "faq" ? "active" : null} onClick={() => setLinkActive("faq")} to={"/faq"}>FAQ</Link></li>
                 <li className="cart-nav"><Link className={linkActive == "cart" ? "active" : null} onClick={() => setLinkActive("cart")} to={"/cart"}><CartWidget /></Link></li>
