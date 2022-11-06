@@ -4,17 +4,19 @@ import ItemListContainer from "./ItemListContainer";
 import ItemDetailContainer from "./ItemDetailContainer";
 import AboutUs from "./AboutUs";
 import Faq from "./Faq";
+import HomeContainer from "./HomeContainer";
+import Cart from "./Cart";
 import Root from "./Root";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root />,
-        errorElement: <h1>No encontrado</h1>,
+        errorElement: <h1>Oops, parece que hubo un error</h1>,
         children: [
             {
                 path: "/",
-                element: <ItemListContainer />
+                element: <HomeContainer />
             },
             {
                 path: "/category/:categoryId",
@@ -32,6 +34,10 @@ const router = createBrowserRouter([
                 path: "/faq",
                 element: <Faq />,
             },
+            {
+                path: "/cart",
+                element: <Cart />,
+            }
         ],
     },
 ]);

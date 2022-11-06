@@ -10,7 +10,7 @@ const NavBar = () => {
         setMobileMenu(!mobileMenu);
     };
 
-    return <>
+    return <header>
         <nav className="menu">
             <Link className="logo" to={"/"} >
                 <h2>Surreal Store</h2>
@@ -28,7 +28,7 @@ const NavBar = () => {
                 <span className={mobileMenu ? "activelinea3-menu-bar" : "linea3-menu-bar"}></span>
             </div>
         </nav>
-    </>
+    </header>
 }
 
 export default NavBar;

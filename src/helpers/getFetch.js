@@ -18,7 +18,10 @@ const productos = [
     {'id': 17, 'name': 'Pasto', 'description': 'Usado, pero en buenas condiciones', 'category': 'cosas' ,'stock': 99, 'price': 573, 'pictureUrl': 'pasto.webp'},
     {'id': 18, 'name': 'Roboto', 'description': 'Tecnologico', 'category': 'cosas' ,'stock': 1, 'price': 1000, 'pictureUrl': 'roboto.webp'},
     {'id': 19, 'name': 'Violeta', 'description': 'Combinalo con negro, porfavor', 'category': 'colores' ,'stock': 4, 'price': 177, 'pictureUrl': 'violeta.png'},
-    {'id': 20, 'name': 'vortice', 'description': 'Voragine', 'category': 'cosas' ,'stock': 68, 'price': 609, 'pictureUrl': 'vortice.jpg'}
+    {'id': 20, 'name': 'Vortice', 'description': 'Voragine', 'category': 'cosas' ,'stock': 68, 'price': 609, 'pictureUrl': 'vortice.jpg'},
+    {'id': 21, 'name': '3 Horas', 'description': 'Te alcanza para ver una peli', 'category': 'tiempo' ,'stock': 3, 'price': 333, 'pictureUrl': '3horas.jpg'},
+    {'id': 22, 'name': 'Verde', 'description': 'Un color relajante, le hara pensar en Kromer', 'category': 'colores' ,'stock': 7, 'price': 214, 'pictureUrl': 'verde.png'},
+    {'id': 23, 'name': 'Rojo', 'description': 'Comprar si marceline tiene hambre', 'category': 'colores' ,'stock': 15, 'price': 156, 'pictureUrl': 'rojo.png'}
 ];
 
 export const getFetch = new Promise((resolve, reject) => {

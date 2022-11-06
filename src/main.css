@@ -9036,7 +9036,8 @@ ul.show, ol.show {
   position: relative;
   width: 80px;
   height: 80px;
-  margin-top: 40vh; }
+  margin-top: 40vh;
+  margin-bottom: 40vh; }
 
 .lds-ripple div {
   position: absolute;
@@ -9081,8 +9082,12 @@ ul.show, ol.show {
   justify-content: center; }
 
 .item-card {
-  margin: 0.5em;
-  padding: 1em; }
+  border-radius: 1em;
+  box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.51);
+  -webkit-box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.51);
+  overflow: hidden;
+  margin: 1em; }
   .item-card div {
     display: flex;
     flex-flow: column;
@@ -9100,6 +9105,7 @@ ul.show, ol.show {
     font-size: 1.3em;
     font-weight: bold; }
   .item-card button {
+    margin: 0.4em;
     --border-radius: 15px;
     border-radius: 15px;
     --border-width: 4px;
@@ -9145,3 +9151,13 @@ ul.show, ol.show {
     filter: hue-rotate(1turn); } }
   .item-card button, .item-card button::after {
     box-sizing: border-box; }
+
+footer {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #8E05C2; }
+  footer div h5 {
+    color: #8E05C2; }
+  footer p {
+    margin: 0; }
