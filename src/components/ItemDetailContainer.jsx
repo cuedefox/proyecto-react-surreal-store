@@ -16,7 +16,7 @@ const ItemDetailContainer = () => {
         .finally(() => setLoading(false))
     }, []);
 
-    return(<div>
+    return(<div className="item-detail-container">
         {loading ? <Spinner />
         :
         <ItemDetail item={item} />}   

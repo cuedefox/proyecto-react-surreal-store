@@ -16,7 +16,7 @@ const ItemDetail = ({item}) => {
         <img src={cargarImagen(`./${item.pictureUrl}`)} alt={item.name} className="detail-img" />
         <div className="detail-info">
             <h2>{item.name}</h2>
-            <p>{item.price}</p>
+            <p><span>${item.price}</span></p>
             <ItemCount stock={item.stock} />
         </div>
         <div className="detail-description">

@@ -8,21 +8,42 @@
     h2 {
         font-size: 3em;
         margin: 0.5em;
+        transition: .2s;
+        color: $color3;
+        &:hover {
+            color: $color2;
+        }
     }
     div {
-        display: flex;
+        display: grid;
+        grid-template-areas: 
+        "tiempo cosas"
+        "colores sentimientos"
+        ;
+        .tiempo {
+            grid-area: tiempo;
+        }
+        .cosas {
+            grid-area: cosas;
+        }
+        .colores {
+            grid-area: colores;
+        }
+        .sentimientos {
+            grid-area: sentimientos;
+        }
         div {
-            margin: 1em;
+            margin: 2em;
             position: relative;
             img {
                 border-radius: 1em;
-                @include size(15em, 15em);
+                @include size(20em, 20em);
             }
             h3 {
                 color: #ffffff;
+                left: 0.3em;
                 position: absolute;
                 bottom: 0.2em;
-                left: 2.5em;
                 font-size: 2em;
                 text-shadow: 3px 2px 13px #000000;
             }

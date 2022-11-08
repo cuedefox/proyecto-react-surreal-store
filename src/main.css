@@ -8969,21 +8969,34 @@ ul.show, ol.show {
   justify-items: center; }
   .categories h2 {
     font-size: 3em;
-    margin: 0.5em; }
+    margin: 0.5em;
+    transition: .2s;
+    color: #700B97; }
+    .categories h2:hover {
+      color: #3E065F; }
   .categories div {
-    display: flex; }
+    display: grid;
+    grid-template-areas: "tiempo cosas" "colores sentimientos"; }
+    .categories div .tiempo {
+      grid-area: tiempo; }
+    .categories div .cosas {
+      grid-area: cosas; }
+    .categories div .colores {
+      grid-area: colores; }
+    .categories div .sentimientos {
+      grid-area: sentimientos; }
     .categories div div {
-      margin: 1em;
+      margin: 2em;
       position: relative; }
       .categories div div img {
         border-radius: 1em;
-        width: 15em;
-        height: 15em; }
+        width: 20em;
+        height: 20em; }
       .categories div div h3 {
         color: #ffffff;
+        left: 0.3em;
         position: absolute;
         bottom: 0.2em;
-        left: 2.5em;
         font-size: 2em;
         text-shadow: 3px 2px 13px #000000; }
 
@@ -9179,18 +9192,36 @@ ul.show, ol.show {
   .item-card button, .item-card button::after {
     box-sizing: border-box; }
 
+.item-detail-container {
+  margin: 0;
+  padding: 0; }
+
 .item-detail {
   display: grid;
-  grid-template-areas: "img info", "description description"; }
+  grid-template-areas: "img info" "description description";
+  margin: 2em; }
 
 .detail-img {
+  width: 25em;
+  height: 25em;
   grid-area: img; }
 
 .detail-info {
-  grid-area: info; }
+  grid-area: info;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: space-between; }
+  .detail-info h2 {
+    font-size: 3em; }
+  .detail-info span {
+    font-size: 2em;
+    color: #8E05C2;
+    font-weight: bolder; }
 
 .detail-description {
-  grid-area: description; }
+  grid-area: description;
+  margin-top: 1.5em; }
 
 footer {
   margin: 0;

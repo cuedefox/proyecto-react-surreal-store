@@ -1,19 +1,39 @@
+.item-detail-container {
+    margin: 0;
+    padding: 0;
+}
+
 .item-detail {
     display: grid;
     grid-template-areas: 
-    "img info",
+    "img info"
     "description description"
     ;
+    margin: 2em
 }
 
 .detail-img {
+    @include size(25em, 25em);
     grid-area: img;
 }
 
 .detail-info {
     grid-area: info;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    h2 {
+        font-size: 3em;
+    }
+    span {
+        font-size: 2em;
+        color: $color4;
+        font-weight: bolder;
+    }
 }
 
 .detail-description {
     grid-area: description;
+    margin-top: 1.5em;
 }
