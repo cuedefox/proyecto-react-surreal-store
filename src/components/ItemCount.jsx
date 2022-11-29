@@ -1,26 +1,12 @@
 import React from "react";
 import { useState } from "react";
 
-const ItemCount = ({ stock }) => {
-    const [itemStock, setItemStock] = useState(stock);
+const ItemCount = ({ stock, onAdd }) => {
     const [cantidad, setCantidad] = useState(1);
-    const [itemAdd, setItemAdd] = useState(0);
 
     const CambiarCantidad = (valor) => {
-        if (valor > 0 && valor <= itemStock) {
+        if (valor > 0 && valor <= stock) {
             setCantidad(valor);
-        }
-    }
-
-    const AgregarProductos = () => {
-        if(cantidad <= itemStock) {
-            setItemStock(itemStock - cantidad);
-            setItemAdd(itemAdd + cantidad);
-        }
-        if (itemStock < 1) {
-            setCantidad(0);
-        }else {
-            setCantidad(1);
         }
     }
 
@@ -37,9 +23,8 @@ const ItemCount = ({ stock }) => {
                     </div>
                     <div className="d-grid gap-2 py-2">
                         <button className="btn btn-secondary" type="button" onClick={() =>
-                        {AgregarProductos()}}>Agregar</button>
+                        {onAdd(cantidad)}}>Agregar</button>
                     </div>
-                    <p>Cantidad de productos agregados: {itemAdd}</p>
                 </div>
             </div>
         </div>

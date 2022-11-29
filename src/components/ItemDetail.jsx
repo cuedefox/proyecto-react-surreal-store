@@ -6,11 +6,15 @@ import { Shop } from "../contexts/Shop";
 
 const ItemDetail = ({item}) => {
     const [goToCart, setGoToCart] = useState(false);
+    const [quantityItemDetail, setQuantityItemDetail] = useState(0);
 
     const onAdd = (quantity) => {
+        console.log(quantity);
+        addProduct({...item, quantity})
+        setQuantityItemDetail(quantity);
         setGoToCart(true);
     }
-
+    
     const {addProduct} = useContext(Shop);
 
     const cargarImagen = require.context("../assets/imgitem", true);
@@ -20,7 +24,10 @@ const ItemDetail = ({item}) => {
         <div className="detail-info">
             <h2>{item.name}</h2>
             <p><span>${item.price}</span></p>
-            <ItemCount stock={item.stock} />
+            {
+                goToCart ? <Link to={'/cart'}><button type="button" className="btn btn-primary btn-lg">Ir al Carrito :D</button></Link>
+                : <ItemCount stock={item.stock} onAdd={onAdd} />
+            }
         </div>
         <div className="detail-description">
             <h3>Descripcion del producto</h3>

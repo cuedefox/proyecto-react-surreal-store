@@ -9007,7 +9007,7 @@ ul.show, ol.show {
   position: relative; }
   .cart-nav img {
     scale: 170%; }
-  .cart-nav p {
+  .cart-nav span {
     font-size: small;
     position: absolute;
     right: 17px;

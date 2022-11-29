@@ -14,7 +14,7 @@ const ItemListContainer = () => {
         (async () => {
             try {
                 let q = categoryId == 'all' ? query(collection(db, "productos"))
-                : query(collection(db, "productos"), where("category", "==", categoryId));;
+                : query(collection(db, "productos"), where("category", "==", categoryId));
 
                 const querySnapshot = await getDocs(q);
                 const productosFirebase = [];
