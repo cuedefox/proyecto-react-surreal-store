@@ -1,8 +1,9 @@
 import { React, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getFetch } from "../helpers/getFetch";
+import { collection, query, where, getDocs } from "firebase/firestore";
 import ItemList from "./ItemList";
 import Spinner from "./Spinner";
+import { db } from "../firebase/config";
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
@@ -10,17 +11,23 @@ const ItemListContainer = () => {
     const {categoryId} = useParams();
 
     useEffect(() => {
-        getFetch
-        .then(response => {
-            if(categoryId === "all" || categoryId == undefined) {
-                setItems(response);
-            }else {
-                let products = response.filter(product => product.category === categoryId);
-                setItems(products);
+        (async () => {
+            try {
+                let q = categoryId == 'all' ? query(collection(db, "productos"))
+                : query(collection(db, "productos"), where("category", "==", categoryId));;
+
+                const querySnapshot = await getDocs(q);
+                const productosFirebase = [];
+                querySnapshot.forEach((doc) => {
+                    console.log(doc.id, " => ", doc.data());
+                    productosFirebase.push({...doc.data(), id: doc.id})
+                });
+                setItems(productosFirebase);
+                setLoading(false);
+            } catch (error) {
+                console.log(error);
             }
-        })
-        .catch(err => console.log(`error: ${err}`))
-        .finally(() => setLoading(false));
+        })();
     }, [categoryId]);
 
     return <div>

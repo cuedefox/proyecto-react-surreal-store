@@ -36,4 +36,10 @@
 .detail-description {
     grid-area: description;
     margin-top: 1.5em;
+    h3 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1.5em;
+    }
 }

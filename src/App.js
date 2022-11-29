@@ -1,9 +1,12 @@
 import Router from "./components/Router";
+import ShopProvider from "./contexts/Shop";
 import "./main.css"
 
 function App() {
   return <>
-    <Router />
+    <ShopProvider>
+      <Router />
+    </ShopProvider>
   </>
 }
 

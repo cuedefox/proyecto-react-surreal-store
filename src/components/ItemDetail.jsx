@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import ItemCount from "./ItemCount";
 import { Link } from 'react-router-dom';
+import { Shop } from "../contexts/Shop";
 
 const ItemDetail = ({item}) => {
     const [goToCart, setGoToCart] = useState(false);
@@ -9,6 +10,8 @@ const ItemDetail = ({item}) => {
     const onAdd = (quantity) => {
         setGoToCart(true);
     }
+
+    const {addProduct} = useContext(Shop);
 
     const cargarImagen = require.context("../assets/imgitem", true);
 
@@ -23,7 +26,6 @@ const ItemDetail = ({item}) => {
             <h3>Descripcion del producto</h3>
             <p>{`${item.description}.`}</p>
         </div>
-
     </div>
 }
 

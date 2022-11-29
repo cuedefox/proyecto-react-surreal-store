@@ -35,6 +35,10 @@
         div {
             margin: 2em;
             position: relative;
+            transition: .4s;
+            &:hover {
+                opacity: 80%;
+            }
             img {
                 border-radius: 1em;
                 @include size(20em, 20em);
