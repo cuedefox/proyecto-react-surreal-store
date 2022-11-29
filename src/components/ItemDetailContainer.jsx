@@ -19,11 +19,9 @@ const ItemDetailContainer = () => {
             const docSnap = await getDoc(docRef);
 
             if (docSnap.exists()) {
-                console.log("Document data:", docSnap.data());
                 setItem({...docSnap.data(), id: docSnap.id});
                 setLoading(false);
             } else {
-                console.log("No such document!");
             }
         }
 

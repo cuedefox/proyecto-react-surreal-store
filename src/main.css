@@ -9230,6 +9230,18 @@ ul.show, ol.show {
   .detail-description p {
     font-size: 1.5em; }
 
+.about-us {
+  font-weight: bold;
+  font-size: 1.5em; }
+  .about-us p {
+    margin: 3em; }
+
+.faq {
+  font-weight: bold;
+  font-size: 1.5em; }
+  .faq p {
+    margin: 3em; }
+
 footer {
   margin: 0;
   padding: 0;

@@ -19,13 +19,11 @@ const ItemListContainer = () => {
                 const querySnapshot = await getDocs(q);
                 const productosFirebase = [];
                 querySnapshot.forEach((doc) => {
-                    console.log(doc.id, " => ", doc.data());
                     productosFirebase.push({...doc.data(), id: doc.id})
                 });
                 setItems(productosFirebase);
                 setLoading(false);
             } catch (error) {
-                console.log(error);
             }
         })();
     }, [categoryId]);

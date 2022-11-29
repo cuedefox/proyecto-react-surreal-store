@@ -1,14 +1,38 @@
-# proyecto-react-surreal-store
-Proyecto en el que implementare lo aprendido en el curso de React de coderhouse
+# Surreal Store
+**Surreal Store** es un proyecto de entrega final para la comision 40275 del curso de *React* de *coderhouse*.
 
-#Pre-entrega 1
-- Creo componente NavBar.jsx y lo importo en app.js
-- Creo el componente CartWidget.jsx y lo importo en NavBar.jsx
-- Creo el componente ItemListContainer.jsx que recibe props para luego renderizarlos en pantalla, y lo importo en app.js
+**Tecnologias Utilizadas**
 
-#Pre-entrega 2
-- Incorporo navegabilidad con react-router-dom
-- Agrego helper con funcion getFetch que devuelve data a renderizar en itemList y en itemDetail
-- Agrego loader que se renderiza hasta que el setTimeOut del getFetch termine
-- Genero gif incluido en la carpeta Gif que muestra navegabilidad de la pagina
-- Creo el componente HomeContainer.jsx que contiene el componente Categories.jsx que navega a una lista de items segun la categoria
+ - React
+ - Scss
+ - FireBase
+
+**Run with:**
+
+    npm start
+
+# Consigna
+Desarrollarás una **app** de un e-commerce para poder vender productos de un rubro a elección.
+**Componentes:**
+
+ 1. Navbar
+ 2. Catálogo
+ 3. Detalle de producto
+ 4. CartContext
+ 5. CartWidget
+
+**Se debe entregar:**
+-   NavBar
+-   CartWidget
+-   ItemListContainer
+-   ItemList
+-   ItemDetailContainer
+-   ItemDetail
+    -   ItemQuantitySelector
+    -   Description
+    -   AddItemButton
+ -   Checkout    
+	 -   Brief (detalle de compra)
+
+**Importante:**
+*En el documento de proyecto final encontrarás, de manera detallada, las piezas que conforman el proyecto para su correcta presentación.*
