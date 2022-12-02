@@ -6,7 +6,7 @@ import Form from "./Form";
 import { saveOrder } from "../services/saveOrder";
 
 const Cart = () => {
-    const { products, calculateTotal } = useContext(Shop);
+    const { products, calculateTotal, emptyCart } = useContext(Shop);
     const confirmPurchase = () => {
         (async () => {
            await saveOrder(
@@ -16,6 +16,7 @@ const Cart = () => {
             products,
             calculateTotal()
            )
+            emptyCart();
         })();
     };
     return <>

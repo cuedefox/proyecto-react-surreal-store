@@ -1,6 +1,10 @@
 import { addDoc, collection, doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../firebase/config";
 import generateOrderObjet from "./generateOrderObjet";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+const MySwal = withReactContent(Swal)
 
 export const saveOrder = async (nombreComprador, telefono, email, products, total) => {
     try {
@@ -45,9 +49,10 @@ export const saveOrder = async (nombreComprador, telefono, email, products, tota
                 collection(db, "orders"),
                 generatedOrder
             );
-            alert(
-                `Se generó la order correctamente con ID: ${docRef.id}`
-            );
+            MySwal.fire({
+                title: `Se generó la orden correctamente con ID: ${docRef.id}`,
+                icon: 'success'
+            })
         } else {
             let mensaje = "";
             for (const product of productOutOfStock) {
