@@ -44,8 +44,7 @@ const ShopProvider = ({ children }) => {
     const calculateTotal = () => {
         const total = products.reduce(
             (acc, productoActual) =>
-                (acc += productoActual.quantity * productoActual.price),
-            0
+                (acc += productoActual.quantity * productoActual.price),0
         );
         return total;
     };

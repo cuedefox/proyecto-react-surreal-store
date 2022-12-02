@@ -7,7 +7,7 @@ const CartWidget = () => {
     
     return <div>
         <img src={cartImg} alt="carrito" />
-        <span>{totalItemsCart() === 0 ? '0' : totalItemsCart() > 9 ? '+9' : `${totalItemsCart()}`}</span>
+        <span>{totalItemsCart() === 0 ? '0' : totalItemsCart() > 99 ? '+99' : `${totalItemsCart()}`}</span>
     </div>
 }
 

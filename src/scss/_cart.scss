@@ -1,0 +1,35 @@
+.brief {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30;
+    gap: 40;
+    align-items: center;
+    margin: 1em;
+    p {
+        font-size: 2em;
+        color: $color2;
+        font-weight: bold;
+    }
+    div {
+        cursor: pointer;
+        img {
+            @include size(2em, 2em);
+        }
+    }
+}
+.total-cart {
+    color: $color2;
+    font-weight: bold;
+}
+.no-hay-productos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 3em;
+    h2 {
+        margin: 2em;
+    }
+}

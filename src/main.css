@@ -8912,8 +8912,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #fff;
-  box-shadow: 5px 0 10px rgba(112, 11, 151, 0.6); }
+  box-shadow: 5px 0 10px rgba(112, 11, 151, 0.6);
+  position: sticky; }
 
 .menu-items {
   display: flex;
@@ -9010,7 +9010,7 @@ ul.show, ol.show {
   .cart-nav span {
     font-size: small;
     position: absolute;
-    right: 17px;
+    right: 14px;
     top: 10px; }
 
 @media screen and (max-width: 858px) {
@@ -9241,6 +9241,38 @@ ul.show, ol.show {
   font-size: 1.5em; }
   .faq p {
     margin: 3em; }
+
+.brief {
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30;
+  gap: 40;
+  align-items: center;
+  margin: 1em; }
+  .brief p {
+    font-size: 2em;
+    color: #3E065F;
+    font-weight: bold; }
+  .brief div {
+    cursor: pointer; }
+    .brief div img {
+      width: 2em;
+      height: 2em; }
+
+.total-cart {
+  color: #3E065F;
+  font-weight: bold; }
+
+.no-hay-productos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 3em; }
+  .no-hay-productos h2 {
+    margin: 2em; }
 
 footer {
   margin: 0;
