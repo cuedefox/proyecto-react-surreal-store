@@ -4,11 +4,11 @@ import React from "react";
 export const Form = createContext({});
 
 const FormProvider = ({ children }) => {
-    const [nombre, setNombre] = useState();
-    const [apellido, setApellido] = useState();
+    const [nombre, setNombre] = useState('');
+    const [apellido, setApellido] = useState('');
     const [telefono, setTelefono] = useState();
-    const [mail, setMail] = useState();
-    const [mail2, setMail2] = useState();
+    const [mail, setMail] = useState('');
+    const [mail2, setMail2] = useState('');
 
     const emptyForm = () => {
         setNombre('');
