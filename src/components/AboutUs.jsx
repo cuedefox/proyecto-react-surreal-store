@@ -19,6 +19,11 @@ const AboutUs = () => {
         sobre tu empresa desde el punto de vista más “humano”.
         Pero antes de nada, me gustaría aclararte la pregunta que seguramente ahora mismo te estás haciendo, 
         si aún no habías prestado demasiada atención a esta sección de tu web:</p>
+        <h3>C.R.O</h3>
+        <iframe width="1000" height="500" src="https://www.youtube.com/embed/L4tn8Hx4L0I" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen />
     </div>
 }
 

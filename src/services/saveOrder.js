@@ -30,9 +30,11 @@ export const saveOrder = async (nombreComprador, telefono, email, products, tota
                     "productos",
                     productInCart.id
                 );
+                const docSnap = await getDoc(productRef);
+                const productInFirebase = { ...docSnap.data(), id: docSnap.id };
                 await updateDoc(productRef, {
                     stock:
-                    productInCart.stock -
+                    productInFirebase.stock -
                     productInCart.quantity
                 });
                 console.log(productInCart.stock)
