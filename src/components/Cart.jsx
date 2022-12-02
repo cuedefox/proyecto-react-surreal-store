@@ -1,23 +1,28 @@
 import { React, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Shop } from "../contexts/Shop";
+import { Form } from "../contexts/Form";
 import CartItem from "./CartItem";
-import Form from "./Form";
 import { saveOrder } from "../services/saveOrder";
+import CartForm from "./CartForm";
 
 const Cart = () => {
     const { products, calculateTotal, emptyCart } = useContext(Shop);
-    const confirmPurchase = () => {
-        (async () => {
-           await saveOrder(
-            "Sebas",
-            11111122222,
-            "sebas@live.com",
-            products,
-            calculateTotal()
-           )
-            emptyCart();
-        })();
+    const { nombre, apellido, telefono, mail, mail2, emptyForm } = useContext(Form);
+    const confirmPurchase = async () => {
+        if (mail != mail2 || mail == '' || nombre == ""){
+            alert('Error en los campos de texto, los email no coinciden o no hay campos ingresados')
+        } else {
+            await saveOrder(
+                `${nombre} ${apellido}`,
+                telefono,
+                mail,
+                products,
+                calculateTotal()
+               )
+                emptyCart();
+                emptyForm();
+        }
     };
     return <>
         {products.length > 0 ? <div>
@@ -25,7 +30,7 @@ const Cart = () => {
                 return <CartItem key={product.id} item={product} />;
             })}
             <p className="total-cart">Total: {`${calculateTotal()}`}$</p>
-            <Form />
+            <CartForm />
             <button className="btn btn-success p-3" onClick={confirmPurchase}>
                 Confirmar compra
             </button>

@@ -41,9 +41,6 @@ export const saveOrder = async (nombreComprador, telefono, email, products, tota
                     productInFirebase.stock -
                     productInCart.quantity
                 });
-                console.log(productInCart.stock)
-                console.log(productRef)
-                console.log(productInCart.quantity)
             }
             const docRef = await addDoc(
                 collection(db, "orders"),

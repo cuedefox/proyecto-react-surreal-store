@@ -1,11 +1,14 @@
 import Router from "./components/Router";
+import FormProvider from "./contexts/Form";
 import ShopProvider from "./contexts/Shop";
 import "./main.css"
 
 function App() {
   return <>
     <ShopProvider>
-      <Router />
+      <FormProvider>
+        <Router />
+      </FormProvider>
     </ShopProvider>
   </>
 }

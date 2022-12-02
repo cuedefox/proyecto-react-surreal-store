@@ -9,7 +9,6 @@ const ItemDetail = ({item}) => {
     const [quantityItemDetail, setQuantityItemDetail] = useState(0);
 
     const onAdd = (quantity) => {
-        console.log(quantity);
         addProduct({...item, quantity})
         setQuantityItemDetail(quantity);
         setGoToCart(true);

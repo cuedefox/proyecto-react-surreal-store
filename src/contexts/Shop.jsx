@@ -7,7 +7,6 @@ const ShopProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
 
     const addProduct = (productToAdd) => {
-        console.log(productToAdd);
         const flagRepeated = isProductRepeated(productToAdd.id);
         if (flagRepeated) {
             const productoRepetidoModificado = products.find(
