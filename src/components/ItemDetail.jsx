@@ -13,7 +13,6 @@ const ItemDetail = ({item}) => {
         setQuantityItemDetail(quantity);
         setGoToCart(true);
     }
-    
     const {addProduct} = useContext(Shop);
 
     const cargarImagen = require.context("../assets/imgitem", true);

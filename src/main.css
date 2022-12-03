@@ -8905,6 +8905,9 @@ ol {
 a {
   text-decoration: none; }
 
+form input {
+  margin: 0.2em; }
+
 .menu {
   background-color: #000000;
   width: 100vw;

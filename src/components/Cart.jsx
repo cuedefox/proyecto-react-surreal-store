@@ -11,7 +11,7 @@ const Cart = () => {
     const { nombre, apellido, telefono, mail, mail2, emptyForm } = useContext(Form);
     const confirmPurchase = async () => {
         if (mail != mail2 || mail == '' || nombre == ""){
-            alert('Error en los campos de texto, los email no coinciden o no hay campos ingresados')
+            alert('Error en los campos de texto, los email no coinciden o no hay campos ingresados');
         } else {
             await saveOrder(
                 `${nombre} ${apellido}`,
